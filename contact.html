@@ -3,31 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
+  <title>Contact – Muhammed Shijil MK</title>
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+<!-- ─── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Portfolio</a>
-
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+    <a class="navbar-brand" href="index.html">SHIJIL</a>
+    <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto gap-1">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
         <li class="nav-item"><a class="nav-link" href="internships.html">Internships</a></li>
         <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
       </ul>
@@ -35,49 +32,120 @@
   </div>
 </nav>
 
+<!-- ─── Page Hero ──────────────────────────────────────────── -->
+<div class="page-hero">
+  <div class="container">
+    <h1>Get In <span class="gradient-text">Touch</span></h1>
+    <p>Have an opportunity or just want to connect? I'd love to hear from you.</p>
+  </div>
+</div>
+
+<!-- ─── Contact Section ────────────────────────────────────── -->
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-wrapper">
 
-    <form id="contactForm">
-      <input
-        type="text"
-        name="from_name"
-        class="form-control mb-3"
-        placeholder="Your Name"
-        required
-      >
+      <!-- Left – Contact Info -->
+      <div class="contact-info">
+        <a href="tel:+919207674546" class="contact-chip">
+          <i class="fas fa-phone"></i>
+          <div>
+            <div class="chip-label">Phone</div>
+            <div class="chip-value">+91 9207674546</div>
+          </div>
+        </a>
 
-      <input
-        type="email"
-        name="reply_to"
-        class="form-control mb-3"
-        placeholder="Your Email"
-        required
-      >
+        <a href="mailto:muhammedshijil4546@gmail.com" class="contact-chip">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <div class="chip-label">Email</div>
+            <div class="chip-value">muhammedshijil4546@gmail.com</div>
+          </div>
+        </a>
 
-      <textarea
-        name="message"
-        class="form-control mb-3"
-        placeholder="Your Message"
-        rows="5"
-        required
-      ></textarea>
+        <a href="https://www.linkedin.com/in/muhammed-shijil-mk-2b5246331/" target="_blank" class="contact-chip">
+          <i class="fab fa-linkedin-in" style="color:#0a66c2;"></i>
+          <div>
+            <div class="chip-label">LinkedIn</div>
+            <div class="chip-value">Muhammed Shijil MK</div>
+          </div>
+        </a>
 
-      <button class="btn btn-primary w-100" type="submit">
-        Send Message
-      </button>
+        <a href="https://github.com/shij-il" target="_blank" class="contact-chip">
+          <i class="fab fa-github"></i>
+          <div>
+            <div class="chip-label">GitHub</div>
+            <div class="chip-value">github.com/shij-il</div>
+          </div>
+        </a>
 
-      <p id="formStatus" class="text-center mt-3"></p>
-    </form>
+        <a href="https://leetcode.com/u/shij_il/" target="_blank" class="contact-chip">
+          <span style="font-family:'Outfit',sans-serif; font-weight:800; font-size:14px; color:var(--primary); min-width:20px;">LC</span>
+          <div>
+            <div class="chip-label">LeetCode</div>
+            <div class="chip-value">leetcode.com/shij_il</div>
+          </div>
+        </a>
+
+        <div class="contact-chip" style="cursor:default;">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <div class="chip-label">Location</div>
+            <div class="chip-value">Ottapalam, Palakkad, Kerala</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right – Form -->
+      <div class="contact-form-wrap">
+        <h4 style="font-weight:800; margin-bottom:24px;">Send a Message</h4>
+
+        <form id="contactForm">
+          <div class="mb-3">
+            <input
+              type="text"
+              name="from_name"
+              class="form-control"
+              placeholder="Your Name"
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="email"
+              name="reply_to"
+              class="form-control"
+              placeholder="Your Email"
+              required
+            >
+          </div>
+
+          <div class="mb-4">
+            <textarea
+              name="message"
+              class="form-control"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <button class="btn-send" type="submit">
+            <i class="fas fa-paper-plane me-2"></i> Send Message
+          </button>
+
+          <p id="formStatus" class="text-center mt-3 mb-0" style="font-weight:500; font-size:0.92rem;"></p>
+        </form>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<!-- Main JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
-
 </body>
 </html>
