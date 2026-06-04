@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,17 @@
 </head>
 <body>
 
-<!-- ─── Navbar ─────────────────────────────────────────────── -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">MUHAMMED_SHIJIL</a>
-    <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="navbar-actions">
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -32,7 +36,12 @@
   </div>
 </nav>
 
-<!-- ─── Page Hero ──────────────────────────────────────────── -->
+<div class="nav-hint" id="navHint">
+  <i class="fas fa-bars"></i>
+  <span>Tap ☰ to navigate between pages</span>
+  <button class="nav-hint-close" onclick="dismissNavHint()" aria-label="Dismiss"><i class="fas fa-times"></i></button>
+</div>
+
 <div class="page-hero">
   <div class="container">
     <h1>About <span class="gradient-text">Me</span></h1>
@@ -40,24 +49,20 @@
   </div>
 </div>
 
-<!-- ─── About Section ──────────────────────────────────────── -->
 <section class="section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
 
-        <!-- Intro Card -->
-        <div class="card-custom mb-4">
-          <h5 class="mb-3" style="font-weight:700; font-size:1.15rem;">
-            👋 Hello, I'm Muhammed Shijil MK
-          </h5>
-          <p style="color: var(--muted); line-height:1.9;">
+        <div class="card-custom" data-animate>
+          <h5 class="mb-3" style="font-weight:700; font-size:1.15rem;"> Hello, I'm Muhammed Shijil MK</h5>
+          <p style="color:var(--muted); line-height:1.9;">
             I'm a passionate and dedicated Computer Science student specialising in
             <strong>Artificial Intelligence &amp; Data Science</strong>, currently in my
             second year of B.Tech. I love building clean, responsive, and scalable
             web applications that solve real problems.
           </p>
-          <p style="color: var(--muted); line-height:1.9; margin-top:12px;">
+          <p style="color:var(--muted); line-height:1.9; margin-top:12px;">
             My journey in tech started with a curiosity for how websites work and
             quickly evolved into a passion for full-stack development, AI, and
             data-driven solutions. I enjoy working on projects that combine
@@ -65,56 +70,54 @@
           </p>
         </div>
 
-        <!-- Info Chips -->
-        <div class="about-grid mb-4">
+        <div class="about-grid mb-4" data-animate data-delay="1">
           <div class="info-chip">
             <i class="fas fa-map-marker-alt"></i>
             <div>
-              <div style="font-size:0.75rem; color:var(--muted); font-weight:500;">Location</div>
+              <div class="chip-label-sm">Location</div>
               <span>Ottapalam, Palakkad, Kerala</span>
             </div>
           </div>
           <div class="info-chip">
             <i class="fas fa-graduation-cap"></i>
             <div>
-              <div style="font-size:0.75rem; color:var(--muted); font-weight:500;">Degree</div>
+              <div class="chip-label-sm">Degree</div>
               <span>B.Tech CSE (AI &amp; DS)</span>
             </div>
           </div>
           <div class="info-chip">
             <i class="fas fa-code"></i>
             <div>
-              <div style="font-size:0.75rem; color:var(--muted); font-weight:500;">Role</div>
+              <div class="chip-label-sm">Role</div>
               <span>Full Stack Developer</span>
             </div>
           </div>
           <div class="info-chip">
             <i class="fas fa-envelope"></i>
             <div>
-              <div style="font-size:0.75rem; color:var(--muted); font-weight:500;">Email</div>
+              <div class="chip-label-sm">Email</div>
               <span>muhammedshijil4546@gmail.com</span>
             </div>
           </div>
           <div class="info-chip">
             <i class="fas fa-phone"></i>
             <div>
-              <div style="font-size:0.75rem; color:var(--muted); font-weight:500;">Phone</div>
+              <div class="chip-label-sm">Phone</div>
               <span>+91 9207674546</span>
             </div>
           </div>
           <div class="info-chip">
             <i class="fas fa-language"></i>
             <div>
-              <div style="font-size:0.75rem; color:var(--muted); font-weight:500;">Languages</div>
-              <span>Malayalam, English , Hindi</span>
+              <div class="chip-label-sm">Languages</div>
+              <span>Malayalam, English, Hindi</span>
             </div>
           </div>
         </div>
 
-        <!-- What I'm looking for -->
-        <div class="card-custom">
+        <div class="card-custom" data-animate data-delay="2">
           <h5 class="mb-3" style="font-weight:700;">🎯 What I'm Working Towards</h5>
-          <ul style="color:var(--muted); padding-left:1.2rem; line-height:2;">
+          <ul style="color:var(--muted); padding-left:1.2rem; line-height:2.1;">
             <li>Building full-stack web applications with real-world impact</li>
             <li>Deepening expertise in Python, Django / Node.js, and React</li>
             <li>Exploring AI/ML integration in web platforms</li>
@@ -127,6 +130,15 @@
     </div>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="contact.html">Contact</a>
+    </div>
+    <p>Crafted  by <strong>Muhammed Shijil MK</strong></p>
+  </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>

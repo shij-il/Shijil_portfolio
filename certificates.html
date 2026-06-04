@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,17 @@
 </head>
 <body>
 
-<!-- ─── Navbar ─────────────────────────────────────────────── -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">MUHAMMED_SHIJIL</a>
-    <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="navbar-actions">
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -32,7 +36,12 @@
   </div>
 </nav>
 
-<!-- ─── Page Hero ──────────────────────────────────────────── -->
+<div class="nav-hint" id="navHint">
+  <i class="fas fa-bars"></i>
+  <span>Tap ☰ to navigate between pages</span>
+  <button class="nav-hint-close" onclick="dismissNavHint()" aria-label="Dismiss"><i class="fas fa-times"></i></button>
+</div>
+
 <div class="page-hero">
   <div class="container">
     <h1>My <span class="gradient-text">Certificates</span></h1>
@@ -40,44 +49,36 @@
   </div>
 </div>
 
-<!-- ─── Certificates Section ───────────────────────────────── -->
 <section class="section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
 
-        <!-- 1. Internship Certificate -->
-        <div class="cert-card">
+        <!-- 1. Internship -->
+        <div class="cert-card" data-animate>
           <div class="cert-header">
-            <div class="cert-icon">
-              <i class="fas fa-briefcase"></i>
-            </div>
+            <div class="cert-icon"><i class="fas fa-briefcase"></i></div>
             <div>
               <h5>Internship Completion Certificate</h5>
               <p>LITMUS7 Systems Consulting Pvt. Ltd. &nbsp;·&nbsp; Infopark, Kochi</p>
             </div>
           </div>
           <p style="color:var(--muted); font-size:0.9rem; margin-bottom:0;">
-            Awarded upon successful completion of a professional internship at LITMUS7,
-            a leading technology consulting company. Gained industry-level exposure in
-            software development and collaboration.
+            Awarded upon successful completion of a professional internship at LITMUS7.
+            Gained industry-level exposure in software development and collaboration.
           </p>
-
           <button class="btn-outline-primary-custom" onclick="toggleCert('cert1', this)">
             <i class="fas fa-eye"></i> View Certificate
           </button>
-
           <div id="cert1" class="certificate-box">
-            <img
-              src="assets/images/Intern Certificate_Muhammad Shijil.jpg"
-              alt="LITMUS7 Internship Certificate">
+            <img src="assets/images/Intern Certificate_Muhammad Shijil.jpg" alt="LITMUS7 Internship Certificate">
           </div>
         </div>
 
-        <!-- 2. 5G IoT Certificate -->
-        <div class="cert-card">
+        <!-- 2. 5G IoT -->
+        <div class="cert-card" data-animate data-delay="1">
           <div class="cert-header">
-            <div class="cert-icon" style="background: linear-gradient(135deg,#06b6d4,#2563eb);">
+            <div class="cert-icon" style="background:linear-gradient(135deg,#06b6d4,#2563eb);">
               <i class="fas fa-wifi"></i>
             </div>
             <div>
@@ -90,24 +91,19 @@
             5G networks, Internet of Things (IoT) architectures, and their real-world
             applications in modern tech ecosystems.
           </p>
-
           <button class="btn-outline-primary-custom" onclick="toggleCert('cert2', this)">
             <i class="fas fa-eye"></i> View Certificate
           </button>
-
-          <!-- Replace the src with your actual certificate image path -->
           <div id="cert2" class="certificate-box">
-            <img
-              src="assets/images/5g_ioT.jpeg"
-              alt="5G IoT Technology Certificate"
-              onerror="this.parentElement.innerHTML='<p style=\'color:var(--muted);text-align:center;padding:20px;\'>📄 Certificate image will appear here once you add it to assets/images/ as <strong>5g_iot_certificate.jpg</strong></p>'">
+            <img src="assets/images/5g_ioT.jpeg" alt="5G IoT Technology Certificate"
+              onerror="this.parentElement.innerHTML='<p style=\'color:var(--muted);text-align:center;padding:20px;\'>📄 Add your certificate image as <strong>assets/images/5g_ioT.jpeg</strong></p>'">
           </div>
         </div>
 
-        <!-- 3. Hackathon First Prize Certificate -->
-        <div class="cert-card">
+        <!-- 3. Hackathon -->
+        <div class="cert-card" data-animate data-delay="2">
           <div class="cert-header">
-            <div class="cert-icon" style="background: linear-gradient(135deg,#f59e0b,#ef4444);">
+            <div class="cert-icon" style="background:linear-gradient(135deg,#f59e0b,#ef4444);">
               <i class="fas fa-trophy"></i>
             </div>
             <div>
@@ -115,30 +111,20 @@
               <p>College-Level Hackathon &nbsp;·&nbsp; AI-Powered Learning Management System</p>
             </div>
           </div>
-
           <div style="margin:10px 0;">
-            <span class="prize-badge">
-              <i class="fas fa-medal"></i> 1st Prize Winner
-            </span>
+            <span class="prize-badge"><i class="fas fa-medal"></i> 1st Prize Winner</span>
           </div>
-
           <p style="color:var(--muted); font-size:0.9rem; margin-bottom:0;">
             Awarded <strong>First Prize</strong> at a college-level hackathon for building an
             <strong>AI-Powered Learning Management System</strong> — an intelligent platform
-            designed to personalise and enhance the learning experience using artificial
-            intelligence technologies.
+            designed to personalise and enhance the learning experience using AI technologies.
           </p>
-
           <button class="btn-outline-primary-custom" onclick="toggleCert('cert3', this)">
             <i class="fas fa-eye"></i> View Certificate
           </button>
-
-          <!-- Replace the src with your actual certificate image path -->
           <div id="cert3" class="certificate-box">
-            <img
-              src="assets/images/hackathon.jpeg"
-              alt="Hackathon First Prize Certificate"
-              onerror="this.parentElement.innerHTML='<p style=\'color:var(--muted);text-align:center;padding:20px;\'>📄 Certificate image will appear here once you add it to assets/images/ as <strong>hackathon_certificate.jpg</strong></p>'">
+            <img src="assets/images/hackathon.jpeg" alt="Hackathon First Prize Certificate"
+              onerror="this.parentElement.innerHTML='<p style=\'color:var(--muted);text-align:center;padding:20px;\'>📄 Add your certificate image as <strong>assets/images/hackathon.jpeg</strong></p>'">
           </div>
         </div>
 
@@ -146,6 +132,15 @@
     </div>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="contact.html">Contact</a>
+    </div>
+    <p>Crafted by <strong>Muhammed Shijil MK</strong></p>
+  </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>

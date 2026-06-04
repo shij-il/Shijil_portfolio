@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,17 @@
 </head>
 <body>
 
-<!-- ─── Navbar ─────────────────────────────────────────────── -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">MUHAMMED_SHIJIL</a>
-    <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="navbar-actions">
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -32,7 +36,12 @@
   </div>
 </nav>
 
-<!-- ─── Page Hero ──────────────────────────────────────────── -->
+<div class="nav-hint" id="navHint">
+  <i class="fas fa-bars"></i>
+  <span>Tap ☰ to navigate between pages</span>
+  <button class="nav-hint-close" onclick="dismissNavHint()" aria-label="Dismiss"><i class="fas fa-times"></i></button>
+</div>
+
 <div class="page-hero">
   <div class="container">
     <h1>My <span class="gradient-text">Education</span></h1>
@@ -40,49 +49,39 @@
   </div>
 </div>
 
-<!-- ─── Education Section ──────────────────────────────────── -->
 <section class="section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-7">
         <div class="timeline">
 
-          <!-- B.Tech -->
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fas fa-university"></i>
-            </div>
+          <div class="timeline-item" data-animate>
+            <div class="timeline-icon"><i class="fas fa-university"></i></div>
             <div class="timeline-body">
               <h5>B.Tech – Computer Science Engineering</h5>
               <p style="color:var(--primary); font-weight:600; font-size:0.9rem; margin-bottom:4px;">
                 AI &amp; Data Science Specialisation
               </p>
               <p>Currently Pursuing &nbsp;·&nbsp; Second Year</p>
-              <span class="badge-score">CGPA : 8.02</span>
+              <span class="badge-score"><i class="fas fa-star"></i> CGPA : 8.02</span>
             </div>
           </div>
 
-          <!-- Higher Secondary -->
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fas fa-school"></i>
-            </div>
+          <div class="timeline-item" data-animate data-delay="1">
+            <div class="timeline-icon"><i class="fas fa-school"></i></div>
             <div class="timeline-body">
-              <h5>Higher Secondary (Class XII)</h5>
-              <p>Kerala State Board &nbsp;·&nbsp; Science Stream</p>
-              <span class="badge-score">Percentage : 96%</span>
+              <h5>Higher Secondary Examination (Class XII)</h5>
+              <p>DHSE &nbsp;·&nbsp; Computer Science Stream</p>
+              <span class="badge-score"><i class="fas fa-star"></i> Percentage : 96%</span>
             </div>
           </div>
 
-          <!-- SSLC -->
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fas fa-book-open"></i>
-            </div>
+          <div class="timeline-item" data-animate data-delay="2">
+            <div class="timeline-icon"><i class="fas fa-book-open"></i></div>
             <div class="timeline-body">
               <h5>SSLC (Class X)</h5>
-              <p>Kerala Education Board</p>
-              <span class="badge-score">Percentage : 90%+</span>
+              <p>KPBE</p>
+              <span class="badge-score"><i class="fas fa-star"></i> Percentage : 90%+</span>
             </div>
           </div>
 
@@ -91,6 +90,15 @@
     </div>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="contact.html">Contact</a>
+    </div>
+    <p>Crafted  by <strong>Muhammed Shijil MK</strong></p>
+  </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
