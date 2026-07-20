@@ -54,19 +54,18 @@ document.querySelectorAll('.nav-link').forEach(link => {
 
 /* ═══════════════════════════════════════════════════════════
    MOBILE NAV HINT
-   Shows once to first-time mobile visitors, auto-dismisses.
+   Shows every time on mobile/tablet, auto-dismisses.
 ═══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
-  const isMobile  = window.innerWidth < 992;
-  const dismissed = localStorage.getItem('navHintDismissed');
-  const hint      = document.getElementById('navHint');
-  if (!hint || !isMobile || dismissed) return;
+  const isMobileOrTablet = window.innerWidth < 992;
+  const hint = document.getElementById('navHint');
+  if (!hint || !isMobileOrTablet) return;
 
   // Also add pulse ring to hamburger
   const toggler = document.querySelector('.navbar-toggler');
   if (toggler) toggler.classList.add('hamburger-pulse');
 
-  setTimeout(() => hint.classList.add('show'), 1200);
+  setTimeout(() => hint.classList.add('show'), 1000);
   setTimeout(() => dismissNavHint(), 6000);
 });
 
@@ -75,7 +74,6 @@ function dismissNavHint() {
   const toggler = document.querySelector('.navbar-toggler');
   if (hint)    hint.classList.remove('show');
   if (toggler) toggler.classList.remove('hamburger-pulse');
-  localStorage.setItem('navHintDismissed', '1');
 }
 
 /* ═══════════════════════════════════════════════════════════
