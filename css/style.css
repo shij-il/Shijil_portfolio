@@ -63,14 +63,13 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition);
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Outfit', sans-serif;
   color: var(--dark);
   line-height: 1.25;
-  transition: color var(--transition);
 }
 
 a { text-decoration: none; }
