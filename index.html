@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammed Shijil MK – Full Stack Developer</title>
   <meta name="description" content="Portfolio of Muhammed Shijil MK – Aspiring Full Stack Developer, B.Tech CSE (AI & DS)">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- ─── Navbar ─────────────────────────────────────────────── -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">MUHAMMED_SHIJIL</a>
+    <a class="navbar-brand" href="index.html"><span class="logo-mark">MS</span><span class="brand-tag">&lt;</span>Shijil<span class="brand-tag">/&gt;</span></a>
     <div class="navbar-actions">
       <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light mode">
         <i class="fas fa-moon" id="themeIcon"></i>
@@ -50,45 +50,62 @@
 <!-- ─── Hero ───────────────────────────────────────────────── -->
 <section class="hero">
   <div class="container">
-    <div class="hero-inner">
-      <img src="assets/images/shijil_dp.jpeg" alt="Muhammed Shijil MK" class="profile-img">
+    <div class="hero-grid">
 
-      <p class="hero-degree">B.Tech CSE &nbsp;·&nbsp; AI &amp; Data Science</p>
+      <!-- Left: content -->
+      <div class="hero-content">
+        <span class="eyebrow">$ whoami</span>
 
-      <h1 class="hero-name">
-        Hi, I'm <span class="gradient-text">Muhammed Shijil MK</span>
-      </h1>
+        <h1 class="hero-name">
+          <span class="line">Muhammed</span>
+          <span class="line gradient-text">Shijil&nbsp;MK</span>
+        </h1>
 
-      <p class="hero-role">
-        Full Stack Developer &nbsp;·&nbsp; Web Enthusiast &nbsp;·&nbsp; AI Enthusiast
-      </p>
+        <p class="hero-role">&gt; Full-Stack Developer · AI &amp; Data Science</p>
 
-      <div class="hero-buttons">
-        <a href="projects.html" class="hero-btn btn-gradient">
-          <i class="fas fa-folder-open"></i> View Projects
-        </a>
-        <a href="assets/images/Muhammmed_Shijil_MK_Resume.pdf" target="_blank" class="hero-btn btn-outline">
-          <i class="fas fa-file-alt"></i> View Resume
-        </a>
+        <p class="hero-summary">
+          B.Tech CSE student building clean, scalable web applications —
+          from full-stack platforms to AI-powered tools. Currently exploring
+          where good engineering meets real-world impact.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="projects.html" class="hero-btn btn-gradient">
+            <i class="fas fa-folder-open"></i> View Projects
+          </a>
+          <a href="assets/images/Muhammmed_Shijil_MK_Resume.pdf" target="_blank" class="hero-btn btn-outline">
+            <i class="fas fa-file-alt"></i> View Resume
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/shij-il" target="_blank" class="social-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammed-shijil-mk-2b5246331/" target="_blank" class="social-link" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://leetcode.com/u/shij_il/" target="_blank" class="social-link leetcode-link" title="LeetCode">
+            LC
+          </a>
+          <a href="https://wa.me/919207674546" target="_blank" class="social-link" title="WhatsApp" style="color:#25D366;">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:muhammedshijil4546@gmail.com" class="social-link" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
 
-      <div class="social-links">
-        <a href="https://github.com/shij-il" target="_blank" class="social-link" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/muhammed-shijil-mk-2b5246331/" target="_blank" class="social-link" title="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://leetcode.com/u/shij_il/" target="_blank" class="social-link leetcode-link" title="LeetCode">
-          LC
-        </a>
-        <a href="https://wa.me/919207674546" target="_blank" class="social-link" title="WhatsApp" style="color:#25D366;">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="mailto:muhammedshijil4546@gmail.com" class="social-link" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
+      <!-- Right: portrait -->
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <img src="assets/images/shijil_full.jpeg" alt="Muhammed Shijil MK">
+        </div>
+        <div class="stat-float stat-1"><i class="fas fa-graduation-cap" style="color:var(--accent-2)"></i> <span><strong>AI &amp; DS</strong><br>B.Tech CSE</span></div>
+        <div class="stat-float stat-2"><i class="fas fa-code" style="color:var(--accent)"></i> <span><strong>Full-Stack</strong><br>Developer</span></div>
       </div>
+
     </div>
   </div>
 </section>

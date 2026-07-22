@@ -2,7 +2,7 @@
    THEME: DARK / LIGHT
 ═══════════════════════════════════════════════════════════ */
 (function () {
-  const saved = localStorage.getItem('theme') || 'light';
+  const saved = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', saved);
   // Set icon immediately (before DOM ready) to avoid flash
   document.addEventListener('DOMContentLoaded', () => updateThemeIcon(saved));
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('themeToggle');
   if (!btn) return;
   btn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
     const next    = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
